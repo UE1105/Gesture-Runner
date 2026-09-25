@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Gesture Runner - AI 手勢跑酷遊戲</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 載入 MediaPipe 官方庫與繪圖工具 -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <h1>Gesture Runner - AI 手勢跑酷</h1>
+    
+    <div class="game-container">
+        <!-- 遊戲 Canvas 畫布 -->
+        <canvas id="gameCanvas" width="800" height="450"></canvas>
+        
+        <!-- 視訊鏡頭影像（隱藏，背景運算用） -->
+        <video id="webcam" style="display:none;" autoplay playsinline></video>
+        
+        <!-- 手勢狀態提示文字 -->
+        <div id="gestureStatus">手勢狀態：初始化中...</div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
